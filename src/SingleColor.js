@@ -9,7 +9,7 @@ function SingleColor({ rgb, weight, index, hexColor }) {
 
 	const hex = rgbToHex(...rgb);
 
-	const hexValue = `#{hexColor}`;
+	const hexValue = `#${hexColor}`;
 
 	// console.log(hex);
 
@@ -33,7 +33,7 @@ function SingleColor({ rgb, weight, index, hexColor }) {
 				background: `rgb(${bcg})`,
 			}}
 			onClick={clickHandler}>
-			<p className='percentage-value'>{weight}</p>
+			<p className='percentage-value'>{weight}%</p>
 			<p className='color-value'>{hexValue}</p>
 			{alert && <p className='alert'> Copied to clipboard</p>}
 		</article>

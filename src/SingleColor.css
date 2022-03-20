@@ -7,17 +7,19 @@
 .percentage-value {
 	margin-bottom: 0;
 	color: gray;
+	text-align: center;
 }
 
 .color-value {
 	color: gray;
 	margin-bottom: 0;
+	text-align: center;
 }
 .color-light .color-value {
-	color: rgb(231, 216, 216);
+	color: rgb(34, 29, 29);
 }
 .color-light .percentage-value {
-	color: rgb(231, 216, 216);
+	color: rgb(172, 156, 156);
 }
 
 .alert {

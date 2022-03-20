@@ -2,13 +2,14 @@ import { useState } from 'react';
 import classes from './App.module.css';
 
 import Values from 'values.js';
+import SingleColor from './SingleColor';
 
 function App() {
 	const [color, setColor] = useState('');
 
 	const [error, setError] = useState(false);
 
-	const [list, setList] = useState(new Values('#FF7777').all(10));
+	const [list, setList] = useState(new Values('#0000ff').all(10));
 
 	// console.log(list);
 	const changeHandler = (e) => {
@@ -35,7 +36,7 @@ function App() {
 				<form onSubmit={submitHandler}>
 					<input
 						type='text'
-						placeholder='type color'
+						placeholder='#0000ff'
 						value={color}
 						onChange={changeHandler}
 						className={`${
@@ -46,15 +47,19 @@ function App() {
 					</button>
 				</form>
 			</section>
-      
-      <section>
-        
-      </section>
 
-
-
-
-
+			<section className={classes.colors}>
+				{list.map((color, index) => {
+					return (
+						<SingleColor
+							key={index}
+							{...color}
+							index={index}
+							hexColor={color.hex}
+						/>
+					);
+				})}
+			</section>
 		</>
 	);
 }

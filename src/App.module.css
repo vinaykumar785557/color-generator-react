@@ -4,6 +4,12 @@
 	--clr-primary-5: rgb(53, 85, 156);
 }
 
+section {
+	width: 90vw;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+
 .container {
 	text-align: center;
 	max-width: 100%;
@@ -69,4 +75,12 @@
 		/* border-color: transparent; */
 		padding: 0.5rem 1rem;
 	}
+}
+
+.colors {
+	cursor: pointer;
+	min-height: calc(100vh - 100px);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
 }
